@@ -12,5 +12,5 @@ app.get('/', (req, res) =>
 const port = process.env.PORT || 8005;
 
 app.listen(port, function() {
-  console.log('Front started', port);
+  console.log('Frontend is running on port: ', port);
 });
