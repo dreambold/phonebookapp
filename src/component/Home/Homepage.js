@@ -57,7 +57,7 @@ export default function Home() {
 
   const validationData = () => {
     let formIsValid = true;
-    let errors = {};
+    const errors = {};
     if (inputValue && !inputValue.Firstname) {
       formIsValid = false;
       errors["Firstname"] = "*please enter first name";
@@ -176,12 +176,19 @@ export default function Home() {
         <div className="mt-4">
           <ul className="list-group">
             {contactData?.map((item) => {
-              if(search !="" && (item?.firstname?.toLowerCase().indexOf(search) == -1  && item.lastname?.toLowerCase().indexOf(search) == -1 )){
+              if (
+                search != "" &&
+                item?.firstname?.toLowerCase().indexOf(search) == -1 &&
+                item.lastname?.toLowerCase().indexOf(search) == -1
+              ) {
                 return null;
               }
 
               return (
-                <li className="list-group-item d-flex justify-content-between align-items-center" key={item._id}>
+                <li
+                  className="list-group-item d-flex justify-content-between align-items-center"
+                  key={item._id}
+                >
                   <div>
                     <h5>
                       {item?.firstname} {item?.lastname}
