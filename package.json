@@ -29,6 +29,7 @@
     "prettier-eslint": "^15.0.1"
   },
   "scripts": {
+    "dev": "react-scripts start", 
     "start": "nodemon ./server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
